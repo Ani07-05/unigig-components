@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ---- color tokens ---- */
+  --cream: #f6f1e3;
+  --cream-2: #eee5ce;
+  --card: #fbf8f0;
+  --ink: #201e17;
+  --ink-soft: #574e38;
+  --line: #dcd0ae;
+  --blue: #2a3fe0;
+  --mustard: #f0a91c;
+  --green: #1d6b45;
+  --coral: #e0491a;
+
+  /* ---- font tokens ---- */
+  /* Cabinet Grotesk + General Sans load via <link> in app/layout.tsx
+     (Fontshare isn't on next/font/google), Space Mono loads through
+     next/font/google and sets --font-space-mono itself. */
+  --font-cabinet: "Cabinet Grotesk", ui-sans-serif, sans-serif;
+  --font-general: "General Sans", ui-sans-serif, sans-serif;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+}
