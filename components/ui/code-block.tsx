@@ -1,15 +1,15 @@
-import { codeToTokens, type BundledTheme } from "shiki";
+import { codeToTokens, type BundledTheme, type BundledLanguage } from "shiki";
 import { CopyButton } from "@/components/ui/copy-button";
 
 const THEME: BundledTheme = "one-dark-pro";
 
 export async function CodeBlock({
   code,
-  lang = "tsx",
+  lang = "tsx" as BundledLanguage,
   filename,
 }: {
   code: string;
-  lang?: string;
+  lang?: BundledLanguage;
   filename?: string;
 }) {
   const { tokens, bg, fg } = await codeToTokens(code, { lang, theme: THEME });
@@ -31,7 +31,7 @@ export async function CodeBlock({
       </div>
 
       {/* lines */}
-      <pre className="overflow-x-auto px-5 py-5">
+      <pre className="code-scroll overflow-x-auto px-5 py-5">
         {tokens.map((line, lineIdx) => (
           <div key={lineIdx} className="flex min-h-[1.6em]">
             <span
