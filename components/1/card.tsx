@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-/** Base card — every card in the app is this plus more structure. */
+/** Base card - every card in the app is this plus more structure. */
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
@@ -13,7 +13,7 @@ const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElemen
 );
 Card.displayName = "Card";
 
-/** Small stat block — mono label above a large Cabinet Grotesk number. */
+/** Small stat block - mono label above a large Cabinet Grotesk number. */
 function StatCard({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <Card className="w-[170px] p-5">
@@ -23,7 +23,7 @@ function StatCard({ label, value }: { label: string; value: React.ReactNode }) {
   );
 }
 
-/** List row for buyer/seller dashboards — icon, title + meta, tag, price. */
+/** List row for buyer/seller dashboards - icon, title + meta, tag, price. */
 function GigRow({
   icon,
   title,
@@ -55,7 +55,7 @@ function GigRow({
   );
 }
 
-/** Dashed-border, mono-type breakdown — used anywhere money needs an itemized receipt. */
+/** Dashed-border, mono-type breakdown - used anywhere money needs an itemized receipt. */
 function ReceiptCard({
   title,
   rows,
@@ -83,7 +83,7 @@ function ReceiptCard({
   );
 }
 
-/** The pinned sticky-note card from the landing hero — hard offset shadow, no blur. */
+/** The pinned sticky-note card from the landing hero - hard offset shadow, no blur. */
 function FloatingCard({
   tagLabel,
   icon,

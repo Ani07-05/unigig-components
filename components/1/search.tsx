@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { SearchIcon } from "@/components/ui/icons";
+import { SearchIcon } from "@/components/1/icons";
 
 export interface SearchSuggestion {
   id: string;

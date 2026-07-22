@@ -3,7 +3,7 @@ import { Space_Mono } from "next/font/google";
 import "./globals.css";
 
 // Space Mono is on Google Fonts, so next/font handles it (self-hosted,
-// zero layout shift). Cabinet Grotesk and General Sans are Fontshare-only —
+// zero layout shift). Cabinet Grotesk and General Sans are Fontshare-only -
 // loaded via <link> below and referenced through the --font-cabinet /
 // --font-general variables set in globals.css.
 const spaceMono = Space_Mono({
@@ -14,7 +14,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "UniGig UI",
-  description: "UniGig's component library — cream base, hard borders, flat shadows.",
+  description: "UniGig's component library - cream base, hard borders, flat shadows.",
 };
 
 export default function RootLayout({

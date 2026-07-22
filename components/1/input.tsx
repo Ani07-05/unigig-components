@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-/** Boxed field — for forms someone is actively filling out (Post a gig). */
+/** Boxed field - for forms someone is actively filling out (Post a gig). */
 const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   ({ className, ...props }, ref) => (
     <input
@@ -18,7 +18,7 @@ const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLI
 Input.displayName = "Input";
 
 /**
- * Receipt-row input — for a value that's already known and just needs
+ * Receipt-row input - for a value that's already known and just needs
  * confirming (Log in). Label sits left, value right-aligned in mono,
  * no visible box, dashed underline instead.
  */

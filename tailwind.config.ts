@@ -30,7 +30,7 @@ const config: Config = {
         card: "16px",
       },
       boxShadow: {
-        // the flat, offset "sticky-note" shadow used on floating cards —
+        // the flat, offset "sticky-note" shadow used on floating cards -
         // deliberately not a blurred box-shadow
         flat: "5px 5px 0 var(--ink)",
       },

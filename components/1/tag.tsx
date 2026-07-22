@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-// One pill shape everywhere — color is the only thing that changes
+// One pill shape everywhere - color is the only thing that changes
 // meaning, so it stays learnable across tiers and statuses alike.
 const tagVariants = cva(
   "inline-block whitespace-nowrap rounded-full px-[11px] py-[5px] font-mono text-[11px] font-bold uppercase tracking-wide",
