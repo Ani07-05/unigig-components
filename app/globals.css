@@ -20,6 +20,25 @@
      next/font/google and sets --font-space-mono itself. */
   --font-cabinet: "Cabinet Grotesk", ui-sans-serif, sans-serif;
   --font-general: "General Sans", ui-sans-serif, sans-serif;
+
+  /* ---- theme 2 (corporate) color tokens ----
+     One base primary (cool blue) + a CMYK semantic accent set, sitting on
+     a 60 (bg/bg-2) / 30 (surface/ink) / 10 (primary + cmy accents) split. */
+  --c-bg: #eef1f6;
+  --c-bg-2: #e3e8f0;
+  --c-surface: #ffffff;
+  --c-ink: #10151f;
+  --c-ink-soft: #55606f;
+  --c-line: #cbd3de;
+  --c-primary: #1d4ed8;
+  --c-primary-dark: #1734a0;
+  --c-primary-soft: #dce5fb;
+  --c-cyan: #0e7490;
+  --c-cyan-soft: #d7edf2;
+  --c-magenta: #9d174d;
+  --c-magenta-soft: #f6dce8;
+  --c-yellow: #a16207;
+  --c-yellow-soft: #f5e8cc;
 }
 
 body {

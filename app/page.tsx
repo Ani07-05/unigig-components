@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-const THEMES = [{ href: "/1", label: "Theme 1 - Cream" }];
+const THEMES = [
+  { href: "/1", label: "Theme 1 - Cream" },
+  { href: "/2", label: "Theme 2 - Corporate" },
+];
 
 export default function Home() {
   return (

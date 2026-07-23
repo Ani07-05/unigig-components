@@ -2,11 +2,12 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { CheckIcon } from "@/components/2/icons";
 
-export interface ToggleProps
+export interface CheckboxProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "size"> {}
 
-const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
+const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ className, checked, defaultChecked, onChange, disabled, ...props }, ref) => {
     const [internalChecked, setInternalChecked] = React.useState(!!defaultChecked);
     const isControlled = checked !== undefined;
@@ -22,7 +23,6 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
         <input
           ref={ref}
           type="checkbox"
-          role="switch"
           checked={checked}
           defaultChecked={defaultChecked}
           disabled={disabled}
@@ -35,23 +35,18 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
         />
         <span
           className={cn(
-            "relative flex h-6 w-[42px] flex-shrink-0 items-center rounded-full border-[1.5px] border-ink bg-card transition-colors",
-            "peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-blue peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-cream",
-            isChecked && "bg-ink",
+            "flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border border-c-line bg-c-surface text-white transition-colors",
+            "peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-c-primary peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-c-surface",
+            isChecked && "border-c-primary bg-c-primary",
             className
           )}
         >
-          <span
-            className={cn(
-              "ml-[2px] h-[18px] w-[18px] rounded-full border-[1.5px] border-ink bg-cream transition-transform",
-              isChecked && "translate-x-[18px] border-cream bg-cream"
-            )}
-          />
+          {isChecked && <CheckIcon className="h-3.5 w-3.5" />}
         </span>
       </label>
     );
   }
 );
-Toggle.displayName = "Toggle";
+Checkbox.displayName = "Checkbox";
 
-export { Toggle };
+export { Checkbox };

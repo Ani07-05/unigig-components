@@ -35,16 +35,16 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
         />
         <span
           className={cn(
-            "relative flex h-6 w-[42px] flex-shrink-0 items-center rounded-full border-[1.5px] border-ink bg-card transition-colors",
-            "peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-blue peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-cream",
-            isChecked && "bg-ink",
+            "relative flex h-6 w-11 flex-shrink-0 items-center rounded-md border border-c-line bg-c-surface transition-colors",
+            "peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-c-primary peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-c-bg",
+            isChecked && "bg-c-primary",
             className
           )}
         >
           <span
             className={cn(
-              "ml-[2px] h-[18px] w-[18px] rounded-full border-[1.5px] border-ink bg-cream transition-transform",
-              isChecked && "translate-x-[18px] border-cream bg-cream"
+              "ml-[3px] h-[18px] w-[18px] rounded border border-c-line bg-white transition-transform",
+              isChecked && "translate-x-[20px] border-white bg-white"
             )}
           />
         </span>
