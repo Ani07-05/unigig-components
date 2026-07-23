@@ -182,7 +182,7 @@ export default function ThemeFourPage() {
           <div className="flex gap-2">
             <Badge>Default</Badge>
             <Badge variant="pink">Pink</Badge>
-            <Badge variant="outline">Outline</Badge>
+            <Badge variant="black">Black</Badge>
           </div>
         </Row>
 
@@ -205,8 +205,8 @@ export default function ThemeFourPage() {
 
         <Row title="Card - FeatureCard">
           <div className="flex gap-3 flex-wrap">
-            <FeatureCard icon={<TechIcon />} title="Tech gigs" description="Hardware and software help" />
-            <FeatureCard icon={<TutorIcon />} title="Tutoring" description="Study help and problem sets" />
+            <FeatureCard icon={<TechIcon />} tag="Category" title="Tech gigs" description="Hardware and software help" />
+            <FeatureCard icon={<TutorIcon />} tag="Category" title="Tutoring" description="Study help and problem sets" />
           </div>
         </Row>
 

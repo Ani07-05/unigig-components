@@ -12,7 +12,7 @@ export function Dropdown({ children }: { children: React.ReactNode }) {
   const children2 = React.Children.toArray(children);
   return (
     <div ref={ref} className="relative inline-block">
-      {React.cloneElement(children2[0] as React.ReactElement, { onClick: () => setOpen(!open) })}
+      {React.cloneElement(children2[0] as React.ReactElement<{ onClick?: () => void }>, { onClick: () => setOpen(!open) })}
       {open && <div className="absolute left-0 top-full z-50 mt-1 min-w-[160px] border-2 border-black bg-white shadow-[4px_4px_0_#000]">{children2.slice(1)}</div>}
     </div>
   );
