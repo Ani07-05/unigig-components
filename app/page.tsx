@@ -3,6 +3,8 @@ import Link from "next/link";
 const THEMES = [
   { href: "/1", label: "Theme 1 - Cream" },
   { href: "/2", label: "Theme 2 - Corporate" },
+  { href: "/3", label: "Theme 3 - Aubergine" },
+  { href: "/4", label: "Theme 4 - Neobrutalism" },
 ];
 
 export default function Home() {

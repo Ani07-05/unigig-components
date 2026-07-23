@@ -39,6 +39,21 @@
   --c-magenta-soft: #f6dce8;
   --c-yellow: #a16207;
   --c-yellow-soft: #f5e8cc;
+
+  /* ---- theme 3 (dispatch ledger) color tokens ----
+     A night-shift workshop docket: warm near-black paper, oxblood
+     stamp-ink primary, brass accent for numerals/highlights. */
+  --l-bg: #16110d;
+  --l-bg-2: #1e1811;
+  --l-surface: #241c14;
+  --l-ink: #ece1cc;
+  --l-ink-soft: #a3927a;
+  --l-line: #392f22;
+  --l-primary: #b3462c;
+  --l-primary-dark: #8f3720;
+  --l-primary-soft: #3a2117;
+  --l-accent: #c9973f;
+  --l-accent-soft: #3a2c15;
 }
 
 body {
@@ -64,4 +79,21 @@ body {
 .code-scroll {
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+}
+
+/* ── theme 3 (dispatch ledger): fibrous paper grain ──
+   Alpha is baked into the noise itself (feComponentTransfer), so this is
+   a plain background-image - no mix-blend-mode, no isolation, no stacking
+   context. Backgrounds always paint under the border box, so it can never
+   wash out a border color the way the old blend-mode version did. */
+.l-grain {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' result='t'/><feColorMatrix in='t' type='saturate' values='0'/><feComponentTransfer><feFuncA type='linear' slope='0.09' intercept='0'/></feComponentTransfer></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* theme 3 hero surface: a brass desk-lamp glow pooling from the top edge,
+   grain layered on top - two plain background-images, no blend mode. */
+.l-hero-bg {
+  background-color: var(--l-bg-2);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n2'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' result='t'/><feColorMatrix in='t' type='saturate' values='0'/><feComponentTransfer><feFuncA type='linear' slope='0.09' intercept='0'/></feComponentTransfer></filter><rect width='100%25' height='100%25' filter='url(%23n2)'/></svg>"),
+    radial-gradient(ellipse 70% 55% at 50% -10%, rgba(201, 151, 63, 0.16), transparent 70%);
 }

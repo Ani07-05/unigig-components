@@ -37,6 +37,24 @@ const config: Config = {
         "c-magenta-soft": "var(--c-magenta-soft)",
         "c-yellow": "var(--c-yellow)",
         "c-yellow-soft": "var(--c-yellow-soft)",
+
+        // theme 3 (dispatch ledger) - warm near-black workshop paper,
+        // oxblood primary, brass accent. no purple, no cool grays.
+        // NOTE: prefixed "dl-" not "l-" - Tailwind reads border-l-<color> as
+        // the directional (left-side) border utility, so a plain "l-line"
+        // key collided with theme 1's "line" color and silently resolved to
+        // the wrong (light cream) value on every bordered component.
+        "dl-bg": "var(--l-bg)",
+        "dl-bg-2": "var(--l-bg-2)",
+        "dl-surface": "var(--l-surface)",
+        "dl-ink": "var(--l-ink)",
+        "dl-ink-soft": "var(--l-ink-soft)",
+        "dl-line": "var(--l-line)",
+        "dl-primary": "var(--l-primary)",
+        "dl-primary-dark": "var(--l-primary-dark)",
+        "dl-primary-soft": "var(--l-primary-soft)",
+        "dl-accent": "var(--l-accent)",
+        "dl-accent-soft": "var(--l-accent-soft)",
       },
       fontFamily: {
         display: ["var(--font-cabinet)", "sans-serif"],
@@ -45,6 +63,9 @@ const config: Config = {
 
         corp: ["var(--font-plex-sans)", "ui-sans-serif", "sans-serif"],
         "corp-mono": ["var(--font-plex-mono)", "ui-monospace", "monospace"],
+
+        ledger: ["var(--font-instrument-serif)", "serif"],
+        "ledger-mono": ["var(--font-space-mono)", "ui-monospace", "monospace"],
       },
       borderRadius: {
         card: "16px",
@@ -58,6 +79,11 @@ const config: Config = {
         // no playfulness - just quiet depth.
         "c-sm": "0 1px 2px 0 rgba(16, 21, 31, 0.06)",
         c: "0 1px 2px 0 rgba(16, 21, 31, 0.05), 0 12px 24px -12px rgba(16, 21, 31, 0.18)",
+
+        // theme 3 - deep warm-black elevation, like a stack of paper
+        // docket sheets lifted off a workbench. no cool-toned blur.
+        "dl-sm": "0 1px 0 0 rgba(0, 0, 0, 0.4), 0 2px 6px -1px rgba(0, 0, 0, 0.35)",
+        dl: "0 1px 0 0 rgba(0, 0, 0, 0.4), 0 14px 32px -12px rgba(0, 0, 0, 0.65)",
       },
     },
   },

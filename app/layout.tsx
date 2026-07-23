@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Mono, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Space_Mono, IBM_Plex_Sans, IBM_Plex_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 // Space Mono is on Google Fonts, so next/font handles it (self-hosted,
@@ -24,6 +24,15 @@ const plexMono = IBM_Plex_Mono({
   variable: "--font-plex-mono",
 });
 
+// Theme 3 (dispatch ledger) display type - a lone, warm italic-capable
+// serif for headline moments, everything else in that theme stays mono.
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
+});
+
 export const metadata: Metadata = {
   title: "UniGig UI",
   description: "UniGig's component library - cream base, hard borders, flat shadows.",
@@ -35,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${spaceMono.variable} ${plexSans.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${spaceMono.variable} ${plexSans.variable} ${plexMono.variable} ${instrumentSerif.variable}`}>
       <head>
         <link
           rel="stylesheet"
